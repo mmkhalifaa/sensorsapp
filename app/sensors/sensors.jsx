@@ -8,7 +8,7 @@ const Sensors = () => (
         <Row>
                 <Card id={"46c634d04cc2fb4a4ee0f1596c5330328130ff80"}/>
                 <Card id={"d823cb4204c9715f5c811feaabeea45ce06736a0"}/>
-                <Card id={"d823cb4204c9715f5c811feaabeea45ce06736a0"}/>
+                <Card id={"437b3687100bcb77959a5fb6d0351b41972b1173"}/>
                 <SensorsCharts />
         </Row>
     </Grid>
