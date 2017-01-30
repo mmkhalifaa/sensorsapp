@@ -18,7 +18,7 @@ export const bundleExtraction = (options) => {
 
 export const reactPerformanceUtils = () => ({
     modules: {
-        loaders:[
+        loaders: [
             {
                 test: require.resolve("react"),
                 loaders: ["expose?React"],
@@ -28,23 +28,23 @@ export const reactPerformanceUtils = () => ({
 });
 
 export const indexGeneration = options => ({
-        plugins:[
-           new HtmlWebpackPlugin({
-                template: "node_modules/html-webpack-template/index.ejs",
-                inject: false,
-                title: options.title,
-                appMountId: options.appMountId,
-            }),
-        ],
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "node_modules/html-webpack-template/index.ejs",
+            inject: false,
+            title: options.title,
+            appMountId: options.appMountId,
+        }),
+    ],
 });
 
 export const linter = include => ({
     module: {
-        preloaders:[
+        preloaders: [
             {
                 test: /\.jsx?$/,
                 loaders: ["eslint"],
-                include, 
+                include,
             },
         ],
     },
@@ -52,7 +52,7 @@ export const linter = include => ({
 
 export const styleLoader = include => ({
     module: {
-        loaders:[
+        loaders: [
             {
                 test: /\.(s?)css$/,
                 loader: ExtractTextPlugin.extract({
@@ -62,19 +62,31 @@ export const styleLoader = include => ({
                 include,
             },
         ],
-        plugins: [
-            new ExtractTextPlugin("[name].[chunkhash].css"),
+    },
+    plugins: [
+        new ExtractTextPlugin("[name].[chunkhash].css"),
+    ],
+});
+
+export const fileLoader = include => ({
+    module: {
+        loaders: [
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)$/,
+                loaders: "file-loader",
+                include,
+            },
         ],
     },
 });
 
 export const jsonLoader = include => ({
     module: {
-        loaders:[
+        loaders: [
             {
                 test: /\.json$/,
                 loaders: "json",
-                include, 
+                include,
             },
         ],
     },

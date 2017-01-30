@@ -41,7 +41,8 @@ export default merge(
         appMountId: "app",
     }),
     parts.styleLoader(PATHS.STYLES),
-    parts.jsonLoader(PATHS.JSON)
+    parts.jsonLoader(PATHS.JSON),
+    parts.fileLoader()
 );
 
 
