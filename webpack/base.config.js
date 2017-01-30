@@ -6,7 +6,10 @@ import pkg from "../package.json";
 
 export const PATHS = {
     APP: path.join(__dirname, "../app"),
-    STYLES: path.join(__dirname, "../style"),
+    STYLES: [
+        path.join(__dirname, "../style"),
+        path.join(__dirname, "../node_modules/bootstrap-sass/assets/stylesheets"),
+    ],
 };
 
 export default merge(

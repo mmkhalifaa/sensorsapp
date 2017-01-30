@@ -1,7 +1,13 @@
 import React from "react";
+import { Row, Grid } from "react-bootstrap";
+import SensorsCharts from "../charts/charts";
 
 const Sensors = () => (
-    <div> Hello World </div>
+    <Grid>
+        <Row>
+                <SensorsCharts />
+        </Row>
+    </Grid>
 );
 
 export default Sensors;
