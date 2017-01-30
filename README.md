@@ -41,5 +41,12 @@ being functional).
 
 For your convenience, we have included a script `npm run lint` which will check
 your code against the eslint config.
-# sensorsapp
-# sensorsapp
+
+# How to run
+
+Run Yarn then Yarn start to start the app. You should be able to access it on http://localhost:3000/.
+
+# Troubleshooting issue due to latest webpack 2.2.0: 
+
+npm uninstall webpack then npm install webpack@2.1.0-beta.22 --save-dev should fix the problem.
+
